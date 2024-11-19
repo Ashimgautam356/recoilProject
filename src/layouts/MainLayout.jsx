@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ Suspense } from 'react'
 import NavBar from '../components/mainComponents/NavBar'
 import Footer from '../components/mainComponents/Footer'
 import { Outlet } from 'react-router-dom'
@@ -7,8 +7,9 @@ const MainLayout = () => {
   return (
    <div>
       <NavBar></NavBar>
-      
-      <Outlet></Outlet>
+      <Suspense fallback="----loading-----">
+        <Outlet></Outlet>
+      </Suspense>
 
       <Footer></Footer>
    </div>

@@ -8,6 +8,9 @@ export default {
     extend: {
       fontFamily:{
         primary:["'League Spartan'", "sans-serif"]
+      },
+      colors:{
+        primaryColor: 'rgb(300,20,10)'
       }
     },
   },
